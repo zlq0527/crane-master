@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.crane.system.mapper.CraneDataMapper">
+  <resultMap id="BaseResultMap" type="com.crane.system.entity.CraneData">
+    <!--@mbg.generated-->
+    <!--@Table crane.crane_data-->
+    <result column="id" jdbcType="BIGINT" property="id" />
+    <result column="temporary" jdbcType="VARCHAR" property="temporary" />
+    <result column="weight" jdbcType="INTEGER" property="weight" />
+    <result column="win_speed" jdbcType="INTEGER" property="winSpeed" />
+    <result column="distance" jdbcType="INTEGER" property="distance" />
+    <result column="angle" jdbcType="INTEGER" property="angle" />
+    <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
+    <result column="gmt_modify" jdbcType="TIMESTAMP" property="gmtModify" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, `temporary`, weight, win_speed, distance, angle, gmt_create, gmt_modify
+  </sql>
+</mapper>

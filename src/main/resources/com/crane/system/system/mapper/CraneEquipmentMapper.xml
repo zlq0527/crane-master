@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.crane.system.mapper.CraneEquipmentMapper">
+  <resultMap id="BaseResultMap" type="com.crane.system.entity.CraneEquipment">
+    <!--@mbg.generated-->
+    <!--@Table crane.crane_equipment-->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="crane_data_id" jdbcType="BIGINT" property="craneDataId" />
+    <result column="device_name" jdbcType="VARCHAR" property="deviceName" />
+    <result column="device_type" jdbcType="VARCHAR" property="deviceType" />
+    <result column="sensor" jdbcType="VARCHAR" property="sensor" />
+    <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
+    <result column="gmt_modify" jdbcType="TIMESTAMP" property="gmtModify" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, crane_data_id, device_name, device_type, sensor, gmt_create, gmt_modify
+  </sql>
+</mapper>
