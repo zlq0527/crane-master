@@ -30,9 +30,17 @@ public class AddCraneInfoDTO implements Serializable {
     /**
      * 硬件id
      */
-    @JsonSerialize(using = ToStringSerializer.class)
     private Long equipmentId;
 
     private String imgUid;
+
+    private String company;
+
+    private String principalName;
+
+    private String principalPhone;
+
+
+
 
 }

@@ -60,6 +60,7 @@ public class CraneInfoController {
         BeanUtils.copyProperties(dto, craneInfo);
         LambdaQueryWrapper<CraneInfo> queryWrapper = new LambdaQueryWrapper<>();
         queryWrapper.eq(CraneInfo::getEquipmentId, dto.getEquipmentId());
+        queryWrapper.ne(CraneInfo::getId, dto.getId());
         CraneInfo info = craneInfoMapper.selectOne(queryWrapper);
         if (info != null) {
             return new AppResponse(500, "关联设备信息重复!");

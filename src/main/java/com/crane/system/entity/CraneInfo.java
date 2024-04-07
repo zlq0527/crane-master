@@ -50,6 +50,15 @@ public class CraneInfo implements Serializable {
     @TableField(value = "img_uid")
     private String imgUid;
 
+    @TableField(value = "company")
+    private String company;
+
+    @TableField(value = "principal_name")
+    private String principalName;
+
+    @TableField(value = "principal_phone")
+    private String principalPhone;
+
     /**
      * 创建时间
      */

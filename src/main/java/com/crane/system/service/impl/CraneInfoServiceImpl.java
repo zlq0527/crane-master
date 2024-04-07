@@ -73,6 +73,10 @@ public class CraneInfoServiceImpl extends ServiceImpl<CraneInfoMapper, CraneInfo
         if (craneInfo != null) {
             throw new GlobalExceptionHandler("塔吊名称重复");
         }
+        CraneInfo craneInfo1 = baseMapper.selectOne(new QueryWrapper<CraneInfo>().eq("equipment_id", dto.getEquipmentId()));
+        if (craneInfo1 != null) {
+            throw new GlobalExceptionHandler("关联设备重复");
+        }
         CraneInfo info = new CraneInfo();
         BeanUtils.copyProperties(dto, info);
         int res = baseMapper.insert(info);

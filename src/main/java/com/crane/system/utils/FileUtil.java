@@ -37,7 +37,7 @@ public class FileUtil {
     static {
         String t = Thread.currentThread().getContextClassLoader().getResource("").getPath();
         int i = t.indexOf(PROJECT_NAME);
-        basePath = System.getProperty("user.dir") + '/' + PROJECT_NAME + STORAGE_PATH.replace('\\', '/');
+        basePath = System.getProperty("user.dir") + STORAGE_PATH.replace('\\', '/');
     }
 
 

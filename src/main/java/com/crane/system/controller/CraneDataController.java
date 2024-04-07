@@ -40,7 +40,7 @@ public class CraneDataController {
     }
 
     @GetMapping("/getById")
-    public AppResponse<CraneData> getById(@RequestParam("id") Long id) {
+    public AppResponse<List<CraneData>> getById(@RequestParam("id") Long id) {
         CraneInfo craneInfo = craneInfoService.getById(id);
         if (craneInfo == null) {
             return AppResponse.ok(null);
@@ -51,11 +51,12 @@ public class CraneDataController {
         QueryWrapper<CraneData> wrapper = new QueryWrapper<>();
         wrapper.eq("id", dataId);
         wrapper.orderByDesc("gmt_create");
+        wrapper.last("limit 1");
         List<CraneData> list = craneDataService.list(wrapper);
         if (CollectionUtils.isEmpty(list)) {
             return AppResponse.ok(null);
         }
-        return AppResponse.ok(list.get(0));
+        return AppResponse.ok(list);
     }
 
 

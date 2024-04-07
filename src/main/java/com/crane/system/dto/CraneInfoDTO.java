@@ -1,5 +1,6 @@
 package com.crane.system.dto;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -29,6 +30,12 @@ public class CraneInfoDTO implements Serializable {
      * 硬件id
      */
     private Long equipmentId;
+
+    private String company;
+
+    private String principalName;
+
+    private String principalPhone;
 
     private String deviceName;
 
